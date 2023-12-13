@@ -10,7 +10,7 @@ class TrainController extends Controller
     public function index()
     {
         $today = date('Y-m-d'); // Indica la data corrente nel formato YYYY-MM-DD
-        $trains = Train::where('departure_time', '>=', $today . ' 00:00:00')->get(); // Il modello eloquent train serve a creare una query che filtra i record della tabella trains in base a una condizione. 
+        $trains = Train::where('departure_time', '>=', $today . ' 00:00:00')->get(); // Il modello ::where serve a creare una query che filtra i record della tabella trains in base a una condizione. 
                                                                                     // In questo caso, la condizione è che l'orario di partenza (departure_time) sia maggiore o uguale alla data corrente ($today).
                                                                                     // Train:: Si riferisce al modello Train.
                                                                                     // departure_time è il nome della colonna del database a cui applicare la condizione.
